@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <th>lp.</th>
+            <th>Marka</th>
+            <th>Model</th>
+        </thead>
+        <tbody>
+            <tr th:each="samochod, iterStat : ${list}" th:if="${samochod.visible}">
+                <td th:text="${iterStat.index}"></td>
+                <td th:text="${samochod.marka}"></td>
+
+
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
